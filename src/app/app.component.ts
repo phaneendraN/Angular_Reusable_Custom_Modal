@@ -1,6 +1,6 @@
 import { Component, VERSION, ViewChild, ViewContainerRef } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ModalService } from './modal/modal.service';
+import { ModalService } from './custom-modal/modal.service';
 
 @Component({
   selector: 'my-app',
@@ -21,6 +21,14 @@ export class AppComponent {
   openModal() {
     this.sub = this.modalService
       .openModal(this.entry, 'Are you sure ?', 'click confirm or close')
+      .subscribe((v) => {
+        //your logic
+      });
+  }
+
+  openSecondModal() {
+    this.sub = this.modalService
+      .openDeleteModal(this.entry, 'Are you sure ?', 'click confirm or close1')
       .subscribe((v) => {
         //your logic
       });

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CommonModule } from '@angular/common';
-import { ModalModule } from './modal/modal.module';
+import { ModalModule } from './custom-modal/modal.module';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, CommonModule, ModalModule],
